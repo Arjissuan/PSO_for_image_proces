@@ -22,5 +22,3 @@ def update_velocity_position(particle, best_particle, best_global_particle, w, c
     new_particle = particle + new_velocity
     return new_particle
 
-def select_best_solution(best_global_fitness, particle, image):
-    pass
