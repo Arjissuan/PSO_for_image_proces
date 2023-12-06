@@ -82,7 +82,3 @@ class PSO_algorithm:
 
         plt.show()
         return quantized_image
-
-
-
-
