@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
-from typing import List
 
 class PSO_algorithm:
     def __init__(self, number_of_particles:int, number_of_colors:int, c1:float, c2:float, weight:float, max_iteration:int):
@@ -62,6 +61,8 @@ class PSO_algorithm:
             iteration += 1
 
         pixels = image.reshape((-1, 3))
+        print(global_best_position)
+        print(global_best_fitness)
         kmeans = KMeans(n_clusters=len(global_best_position), init=global_best_position, n_init=1, random_state=42)
         kmeans.fit(pixels)
         labels = kmeans.labels_
